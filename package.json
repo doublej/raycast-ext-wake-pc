@@ -1,0 +1,44 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "wake-pc",
+  "title": "Wake PC",
+  "description": "Send a Wake-on-LAN magic packet to wake your PC",
+  "icon": "command-icon.png",
+  "author": "jurrejan",
+  "categories": ["System"],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "wake-pc",
+      "title": "Wake PC",
+      "description": "Send magic packet to wake PC",
+      "mode": "no-view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "macAddress",
+      "type": "textfield",
+      "title": "MAC Address",
+      "description": "MAC address of the PC to wake (e.g. AA:BB:CC:DD:EE:FF)",
+      "required": true
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.83.0",
+    "@raycast/utils": "^1.17.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.11",
+    "@types/node": "^20.8.10",
+    "@types/react": "^18.3.3",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "ray build --skip-types -e dist -o dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint"
+  }
+}
